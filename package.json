@@ -1,0 +1,27 @@
+{
+  "name": "fiscal-intelligence-platform",
+  "version": "1.0.0",
+  "description": "Ecossistema profissional de inteligência fiscal, contábil, auditoria e automação",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "services/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "test": "node --test tests/**/*.test.mjs",
+    "casos:pendentes": "node scripts/casos-pendentes.mjs",
+    "tabelas:exportar": "node scripts/exportar-tabelas-conferencia.mjs",
+    "dev:api": "node services/api/src/server.mjs",
+    "dev": "node services/api/src/server.mjs",
+    "start": "node services/api/src/server.mjs"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.11.2",
+    "zod": "^4.6.7"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
